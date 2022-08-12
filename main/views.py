@@ -43,13 +43,13 @@ class TodolistDestroyAPIView(DestroyAPIView):
 
 
 #Class based view to Get User Details using Token Authentication
-class UserDetailAPI(APIView):
-  authentication_classes = (TokenAuthentication,)
-  permission_classes = (AllowAny,)
-  def get(self,request,*args,**kwargs):
-    user = User.objects.get(id=request.user.id)
-    serializer = UserSerializer(user)
-    return Response(serializer.data)
+# class UserDetailAPI(APIView):
+#   authentication_classes = (TokenAuthentication,)
+#   permission_classes = (AllowAny,)
+#   def get(self,request,*args,**kwargs):
+#     user = User.objects.get(id=request.user.id)
+#     # serializer = UserSerializer(user)
+#     return Response(serializer.data)
 
 #Class based view to register user
 class RegisterUserAPIView(generics.CreateAPIView):
